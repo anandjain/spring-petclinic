@@ -8,7 +8,7 @@ pipeline {
         stage('Git Clone or Pull'){
             
             steps {
-                git 'https://github.com/asquarezone/spring-petclinic.git'
+                git 'https://github.com/anandjain/spring-petclinic.git'
             }
         }
         
@@ -41,7 +41,7 @@ pipeline {
             subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Failed!",
             body: """<p>'${env.JOB_NAME} [${env.BUILD_NUMBER}]' Failed!":</p>
             <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
-            to: "shaik.khaja.ibrahim@gmail.com"
+            to: "anandjain420@gmail.com"
         )
         }
   }
